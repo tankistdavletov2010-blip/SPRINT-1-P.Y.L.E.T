@@ -1,0 +1,205 @@
+/* ===== ОБЩИЕ СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", cursive; /* тот самый шрифт */
+}
+
+body {
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* ===== ШАПКА ===== */
+.header {
+    text-align: center;
+    background: #4a90e2;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+}
+
+/* ===== КОНТЕЙНЕР С БЛОКАМИ ===== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== КАЖДЫЙ БЛОК ===== */
+.block {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.block h2 {
+    margin-bottom: 15px;
+    color: #4a90e2;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+/* ===== ОБЪЯВЛЕНИЯ ===== */
+.announcements ul {
+    list-style: none;
+}
+
+.announcements li {
+    background: #fff8dc;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-left: 4px solid #f0c040;
+    border-radius: 6px;
+}
+
+/* ===== ТАБЛИЦА РАСПИСАНИЯ ===== */
+.table-wrapper {
+    overflow-x: auto; /* чтобы таблица не ломалась на телефоне */
+}
+
+#schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+#schedule-table th,
+#schedule-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+#schedule-table th {
+    background: #4a90e2;
+    color: white;
+}
+
+/* Подсветка текущего дня */
+.today-column {
+    background: #e3f0ff !important;
+    font-weight: bold;
+}
+
+/* Субботняя «удалёнка» */
+.remote-day {
+    background: #d4edda;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    color: #155724;
+}
+
+/* ===== ФОРМА ЗАМЕТОК ===== */
+.note-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.note-form input,
+.note-form textarea,
+.note-form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.note-form textarea,
+.note-form button {
+    grid-column: span 2;
+}
+
+.note-form button {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.note-form button:hover {
+    background: #357ab8;
+}
+
+/* ===== СПИСОК ЗАМЕТОК ===== */
+.notes-list {
+    list-style: none;
+}
+
+.note-item {
+    background: #f9f9f9;
+    border-left: 4px solid #4a90e2;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.note-info strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.note-info small {
+    color: #777;
+}
+
+.note-info p {
+    margin-top: 6px;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+/* ===== ПОДВАЛ ===== */
+.footer {
+    text-align: center;
+    padding: 15px;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* ===== АДАПТИВ ПОД ТЕЛЕФОН ===== */
+@media (max-width: 600px) {
+    .note-form {
+        grid-template-columns: 1fr;
+    }
+    .note-form textarea,
+    .note-form button {
+        grid-column: span 1;
+    }
+    .header h1 {
+        font-size: 22px;
+    }
+}
