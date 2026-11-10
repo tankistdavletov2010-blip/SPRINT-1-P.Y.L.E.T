@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Чтобы сайт нормально смотрелся на телефоне -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание колледжа</title>
+
+    <!-- Подключаем наши стили -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <h1>Расписание твоего колледжа</h1>
+        <p>Добро пожаловать, студент!</p>
+    </header>
+
+    <main class="container">
+
+        <!-- БЛОК ОБЪЯВЛЕНИЙ -->
+        <section class="block announcements">
+            <h2>Объявления</h2>
+            <ul id="announcements-list">
+                <!-- Сюда JS сам вставит объявления -->
+            </ul>
+        </section>
+
+        <!-- БЛОК РАСПИСАНИЯ -->
+        <section class="block schedule">
+            <h2>Расписание на неделю</h2>
+            <div class="table-wrapper">
+                <table id="schedule-table">
+                    <!-- Таблицу построит JavaScript -->
+                </table>
+            </div>
+        </section>
+
+        <!-- БЛОК ЗАМЕТОК -->
+        <section class="block notes">
+            <h2>Мои заметки</h2>
+
+            <!-- Форма добавления -->
+            <form id="note-form" class="note-form">
+                <input type="date" id="note-date" required>
+                <input type="time" id="note-time" required>
+                <input type="text" id="note-title" placeholder="Заголовок (например: Встреча с куратором)" required>
+                <textarea id="note-text" placeholder="Текст заметки..." rows="2" required></textarea>
+                <button type="submit">Добавить заметку</button>
+            </form>
+
+            <!-- Список заметок -->
+            <ul id="notes-list" class="notes-list">
+                <!-- Сюда JS вставит заметки -->
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <p>© 2026, студенты Киселев Лев и Давлетов Руслан.</p>
+    </footer>
+
+    <!-- Подключаем скрипт (в самом конце, чтобы HTML успел загрузиться) -->
+    <script src="script.js"></script>
+</body>
+</html>
